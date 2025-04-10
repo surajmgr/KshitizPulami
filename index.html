@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kshitiz Pulami - Projects Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-right: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .project-img {
+            height: 180px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .project-desc {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .hosting-options {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .hosting-option {
+            margin-bottom: 1.5rem;
+        }
+        
+        .hosting-option h3 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+                width: 120px;
+                height: 120px;
+            }
+            
+            .projects {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="/kshitiz.jpeg" alt="Kshitiz Pulami" class="profile-image">
+            <div class="profile-info">
+                <h1>Kshitiz Pulami</h1>
+                <p class="tagline">Web Developer & Creative Coder</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="projects">
+            <div class="project-card">
+                <div class="project-img" style="background-color: #e74c3c;">Q</div>
+                <div class="project-info">
+                    <h3 class="project-title">Quiz Application</h3>
+                    <p class="project-desc">An interactive quiz application with multiple categories and difficulty levels.</p>
+                    <a href="/Quiz/index.html" class="btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-color: #3498db;">TTS</div>
+                <div class="project-info">
+                    <h3 class="project-title">Text To Speech</h3>
+                    <p class="project-desc">Convert written text to spoken words with different voice options and settings.</p>
+                    <a href="/TextToSpeech/index.html" class="btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-color: #2ecc71;">X|O</div>
+                <div class="project-info">
+                    <h3 class="project-title">Tic Tac Toe</h3>
+                    <p class="project-desc">Classic tic-tac-toe game with a modern interface and single/multiplayer modes.</p>
+                    <a href="/TicTacToe/index.html" class="btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-color: #9b59b6;">✓</div>
+                <div class="project-info">
+                    <h3 class="project-title">To-Do List</h3>
+                    <p class="project-desc">A task management application to organize your daily activities and boost productivity.</p>
+                    <a href="/ToDoList/index.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </section>    
+    </div>
+    <footer>
+        <p>&copy; 2025 Kshitiz Pulami. All rights reserved.</p>
+    </footer>
+</body>
+</html>
